@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello Vue3</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 데이터 바인딩 -->
+      <input type="text" v-bind:placeholder="message" />
+      <hr />
+      <!-- 이벤트 핸들링 (v-on) -->
+      <button v-on:click="hello">click</button>
+      <br />
+      <!-- 이벤트 핸들링 (v-on) -->
+      <button v-on:click="reverseMessage">click</button>
+      <br />
+      <!-- 데이터 바인딩 (단방향) -->
+      {{userName}}
+      <input type="text" v-bind:value="userName" />
+      <br />
+      <!-- 데이터 바인딩 (양방향) -->
+      {{userName}}
+      <input type="text" v-model="userName" />
+      <!-- 조건문 (v-if) -->
+      <hr />
+      <p v-if="visible">보이나요?</p>
+      <button type="button" v-on:click="visible = true">visible</button>
+      <!-- 반복문 (v-for) -->
+      <hr />
+      <ul>
+        <li v-for="item in items">{{ item }}</li>
+      </ul>
+    </div>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            message: "값을 입력해주세요.",
+            userName: "코딩코딩",
+            visible: false,
+            items: ["사과", "딸기", "포도"],
+          };
+        },
+        methods: {
+          hello() {
+            alert("안녕!");
+          },
+          reverseMessage() {
+            this.message = this.message.split("").reverse().join("");
+          },
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>

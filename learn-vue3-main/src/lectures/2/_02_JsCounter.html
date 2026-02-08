@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello Vue3</title>
+  </head>
+  <body>
+    <button type="button" onclick="increment()">Counter : <span id="counter"></span></button>
+    <script>
+      let counter = 0;
+
+      let $span = document.querySelector("#counter");
+
+      $span.textContent = counter; // vue 에서는 선언만하고 데이터를 넣어주면 렌더링 됐었는데 JS에서는 이렇게 DOM 객체를 직접 가져와야 한다.
+
+      function increment() {
+        // 숫자를 증가시키고 다시 dom 안에 데이터를 손수 넣어줘야 함.
+        counter++;
+        // 자동으로 렌더링이 되지 않기 떄문에 dom 객체를 가져와야 한다.
+        let $span = document.querySelector("#counter");
+        $span.textContent = counter;
+      }
+    </script>
+  </body>
+</html>

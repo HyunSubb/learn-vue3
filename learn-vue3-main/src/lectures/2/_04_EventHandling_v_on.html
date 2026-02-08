@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello Vue3</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-bind:placeholder="message" />
+      <hr />
+      <!-- 이벤트 핸들링 (v-on) -->
+      <button v-on:click="hello">click</button>
+      <br />
+      <!-- 이벤트 핸들링 (v-on) -->
+      <button v-on:click="reverseMessage">click</button>
+    </div>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            message: "값을 입력해주세요.",
+          };
+        },
+        methods: {
+          hello() {
+            alert("안녕!");
+          },
+          reverseMessage() {
+            this.message = this.message.split("").reverse().join("");
+          },
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>

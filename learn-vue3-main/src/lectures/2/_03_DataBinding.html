@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello Vue3</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-bind:placeholder="message" />
+    </div>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            message: "값을 입력해주세요.",
+          };
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>
