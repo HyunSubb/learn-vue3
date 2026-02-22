@@ -8,14 +8,14 @@
     <button v-on:click="message = message + '!'">Click!</button>
     <hr />
     <h2>HTML</h2>
+    <!-- 이중 중괄호는 HTML 속성에 사용할 수 없습니다. 실제 HTML을 출력하려면 [v-html]를 사용하세요. -->
     <p>{{ rawHtml }}</p>
     <p v-html="rawHtml"></p>
     <hr />
     <h2>속성 바인딩</h2>
-    <!-- 이중 중괄호는 HTML 속성에 사용할 수 없습니다. 대신 [v-bind]를 사용하세요. -->
     <!-- v-bind는 매우 자주 사용하기 때문에 단축 문법(:)이 있습니다. -->
-    <div :title="dynamicTitle">마우스를 올려보세요</div>
-    <input type="text" value="홍길동" :disabled="isInputDisabled" />
+    <div v-bind:title="dynamicTitle">마우스를 올려보세요</div>
+    <input type="text" value="홍길동" v-bind:disabled="isInputDisabled" />
     <!-- 다중 속성 바인딩 : 여러 속성을 한번에 바인딩할 수 있다. -->
     <input v-bind="attrs" />
     <h2>JavaScript</h2>
@@ -34,7 +34,8 @@ export default {
     const rawHtml = ref("<strong>안녕하세요</strong>");
 
     const dynamicTitle = ref("안녕하세요!@@@@@!!!");
-    const isInputDisabled = ref(false);
+    const isInputDisabled = ref(true);
+    // const isInputDisabled = ref(false);
     const attrs = ref({
       type: "text",
       value: "12345678",

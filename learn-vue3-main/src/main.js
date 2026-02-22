@@ -5,7 +5,7 @@ import { createApp } from "vue";
 // --- Lecture App Imports (Uncomment to use) ---
 // import App from './lectures/3/App_CompositionAPI.vue';
 // import App from './lectures/3/App_OptionsAPI.vue';
-// import App from './lectures/4/App_CompositionAPI.vue';
+// import App from "./lectures/4/App_CompositionAPI.vue";
 // import App from './lectures/5/App_Setup.vue';
 import App from "./lectures/6/App_TemplateSyntax.vue";
 // import App from './lectures/7/App_reactive.vue';
