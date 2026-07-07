@@ -13,7 +13,7 @@ import { createApp } from "vue";
 // import App from "./lectures/7/_03_App_ref_object_array.vue";
 // import App from "./lectures/7/_04_App_toRefs_toRef.vue";
 // import App from "./lectures/7/_05_App_readonly.vue";
-import App from './lectures/8/App_computed.vue';
+import App from "./lectures/8/App_computed.vue";
 // import App from './lectures/9/App_class_binding.vue';
 // import App from './lectures/9/App_style_binding.vue';
 // import App from './lectures/10/App_v-if.vue';

@@ -10,7 +10,10 @@
 
 <body>
   <div id="app"></div>
-  <script type="module" src="/src/lectures/2/main.js"></script>
+  <!-- 절대 경로: '/'로 시작하면 서버/프로젝트 루트를 기준으로 경로를 탐색합니다. (Vite 개발 서버 동작에는 문제없으나, 현재 VS Code 에디터의 최상위 폴더가 learn-vue3라서 Ctrl+클릭 시 파일을 찾을 수 없는 문제가 생김) -->
+  <!-- <script type="module" src="/src/lectures/2/main.js"></script> -->
+  <!-- 상대 경로: './'로 시작하면 현재 파일(index.html)이 위치한 폴더를 기준으로 경로를 탐색합니다. (VS Code 에디터에서 정상적으로 파일 이동 가능) -->
+  <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
