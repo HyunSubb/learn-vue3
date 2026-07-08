@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<h2>input value</h2>
+		<input type="text" :value="inputValue" />
 		<!-- <input type="text" v-model.lazy="inputValue" /> -->
 		<!-- <input type="text" v-model.number="inputValue" /> -->
 		<input type="text" v-model.trim="inputValue" />
@@ -11,6 +12,7 @@
 		<div>{{ typeof inputValue }}</div>
 
 		<h2>textarea value</h2>
+		<textarea :value="textareaValue"></textarea>
 		<textarea v-model="textareaValue"></textarea>
 		<!-- :value="textareaValue"
 			@input="event => (textareaValue = event.target.value)" -->
@@ -25,6 +27,7 @@
 			true-value="Yes"
 			false-value="No"
 		/>
+		
 		<h3>checkbox values</h3>
 		<label>
 			<input type="checkbox" value="html" v-model="checkboxValues" />
