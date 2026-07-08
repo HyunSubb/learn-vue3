@@ -25,17 +25,17 @@
 	</div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
 
-export default {
-	setup() {
-		const visible = ref(false);
-		const type = ref('A');
-		const ok = ref(true);
-		return { visible, type, ok };
-	},
-};
+// export default {
+// 	setup() {
+const visible = ref(false);
+const type = ref('A');
+const ok = ref(true);
+// return { visible, type, ok };
+// 	},
+// };
 </script>
 
 <style lang="scss" scoped></style>

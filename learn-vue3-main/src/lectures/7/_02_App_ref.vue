@@ -19,6 +19,7 @@ export default {
     const addMessage = () => {
       message.value = message.value + "!";
     };
+    
     console.log("message: ", message);
     console.log("message typeof: ", typeof message);
     console.log("message: ", message.value);

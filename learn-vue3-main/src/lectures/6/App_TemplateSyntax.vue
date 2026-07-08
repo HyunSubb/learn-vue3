@@ -13,6 +13,7 @@
     <p v-html="rawHtml"></p>
     <hr />
     <h2>3. 속성 바인딩</h2>
+    <!-- HTML 속성에 Vue 데이터를 연결하려면 v-bind 디렉티브를 사용해야 한다. -->
     <!-- ** v-bind는 매우 자주 사용하기 때문에 단축 문법(:)이 있습니다. ** -->
     <div v-bind:title="dynamicTitle">마우스를 올려보세요</div>
     <input type="text" value="홍길동" v-bind:disabled="isInputDisabled" />
@@ -25,11 +26,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
 
-export default {
-  setup() {
+// export default {
+  // setup() {
     const message = ref("안녕하세요!");
     const rawHtml = ref("<strong>안녕하세요</strong>");
 
@@ -42,15 +43,15 @@ export default {
       disalbed: false,
     });
 
-    return {
-      message,
-      rawHtml,
-      dynamicTitle,
-      isInputDisabled,
-      attrs,
-    };
-  },
-};
+//     return {
+//       message,
+//       rawHtml,
+//       dynamicTitle,
+//       isInputDisabled,
+//       attrs,
+//     };
+//   },
+// };
 </script>
 
 <style lang="scss" scoped></style>
